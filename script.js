@@ -32,4 +32,4 @@ function postTweet() {
   tweets.insertAdjacentHTML("afterbegin", tweetHTML);
   input.value = "";
   count.textContent = "140 characters left";
-}
+ }
