@@ -18,3 +18,14 @@ function postTweet() {
     <div class="tweet">
       <div>
         <img src="Amity Logo.Png" alt="Profile">
+
+ <div class="info">
+          <strong>Imran Badesab</strong>
+          <span>@Amity Bangluru</span>
+        </div>
+      </div>
+      <div class="text">${format(text)}</div>
+      <div class="small">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} · ${new Date().toDateString()}</div>
+      <div class="small">${Math.floor(Math.random() * 100)} Retweets • ${Math.floor(Math.random() * 500)} Likes</div>
+    </div>
+  `;
