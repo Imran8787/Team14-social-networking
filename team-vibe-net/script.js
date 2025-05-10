@@ -9,3 +9,12 @@ input.addEventListener("input", () => {
 function format(text) {
   return text.replace(/(@\w+|#\w+)/g, match => `<span class="highlight">${match}</span>`);
 }
+
+function postTweet() {
+  const text = input.value.trim();
+  if (text === "") return;
+
+  const tweetHTML = `
+    <div class="tweet">
+      <div>
+        <img src="Amity Logo.Png" alt="Profile">
