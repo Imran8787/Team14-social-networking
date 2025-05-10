@@ -29,3 +29,9 @@ function postTweet() {
       <div class="small">${Math.floor(Math.random() * 100)} Retweets • ${Math.floor(Math.random() * 500)} Likes</div>
     </div>
   `;
+
+
+  tweets.insertAdjacentHTML("afterbegin", tweetHTML);
+  input.value = "";
+  count.textContent = "140 characters left";
+}
