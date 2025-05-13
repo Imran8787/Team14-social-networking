@@ -36,4 +36,5 @@ function postTweet() {
 }
 
 function likeaandcomment() {
-consrt text
+consrt text = input.value.trim():
+ if (text === "") return ;
