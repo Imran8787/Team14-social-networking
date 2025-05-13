@@ -34,3 +34,6 @@ function postTweet() {
   input.value = "";
   count.textContent = "140 characters left";
 }
+
+function likeaandcomment() {
+consrt text
