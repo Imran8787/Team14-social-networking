@@ -31,9 +31,9 @@ function postTweet() {
       </div>
     </div>
     <div class="tweet-text">${formatPostText(content)}</div>
-    <div class="tweet-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} · ${new Date().toDateString()}</div>
+    <div class="tweet-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
     <div class="tweet-stats">
-o      <div>${Math.floor(Math.random() * 100)} Retweets</div>
+      <div>${Math.floor(Math.random() * 100)} Retweets</div>
       <div>${Math.floor(Math.random() * 500)} Likes</div>
     </div>
   `;
