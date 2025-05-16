@@ -1,40 +1,46 @@
-const input = document.getElementById("input");
-const count = document.getElementById("count");
-const tweets = document.getElementById("tweets");
+// Selecting elements
+const input = document.getElementById('postInput');
+const charCount = document.getElementById('charCount');
+const tweetList = document.getElementById('tweetList');
 
-
-input.addEventListener("input", () => {
-  count.textContent = (140 - input.value.length) + " characters left";
+// Count characters on typing
+input.addEventListener('input', () => {
+  charCount.textContent = `${140 - input.value.length} characters left`;
 });
 
-function format(text) {
-  return text.replace(/(@\w+|#\w+)/g, match => `<span class="highlight">${match}</span>`);
+// Format hashtags and mentions
+function formatPostText(text) {
+  return text
+    .replace(/(@\w+)/g, '<span class="hashtag">$1</span>')
+    .replace(/(#\w+)/g, '<span class="hashtag">$1</span>');
 }
 
+// Post a tweet
 function postTweet() {
-  const text = input.value.trim();
-  if (text === "") return;
+  const content = input.value.trim();
+  if (content === '') return;
 
-  const tweetHTML = `
-    <div class="tweet">
+  const tweet = document.createElement('div');
+  tweet.className = 'tweet-container';
+  tweet.innerHTML = `
+    <div class="user-info">
+      <img src="images/profile.png" alt="Profile" />
       <div>
-        <img src="Amity Logo.Png" alt="Profile">
-        <div class="info">
-          <strong>Imran Badesab</strong>
-          <span>@Amity Bangluru</span>
-        </div>
+        <h3>Best Heels</h3>
+        <p>@WalkHappy</p>
       </div>
-      <div class="text">${format(text)}</div>
-      <div class="small">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} · ${new Date().toDateString()}</div>
-      <div class="small">${Math.floor(Math.random() * 100)} Retweets • ${Math.floor(Math.random() * 500)} Likes</div>
+    </div>
+    <div class="tweet-text">${formatPostText(content)}</div>
+    <div class="tweet-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} · ${new Date().toDateString()}</div>
+    <div class="tweet-stats">
+o      <div>${Math.floor(Math.random() * 100)} Retweets</div>
+      <div>${Math.floor(Math.random() * 500)} Likes</div>
     </div>
   `;
 
-  tweets.insertAdjacentHTML("afterbegin", tweetHTML);
-  input.value = "";
-  count.textContent = "140 characters left";
+  // Add the tweet to the top
+  tweetList.prepend(tweet);
+  input.value = '';
+  charCount.textContent = '140 characters left';
 }
 
-function likeaandcomment() {
-consrt text = input.value.trim():
- if (text === "") return ;
