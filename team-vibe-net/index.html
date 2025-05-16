@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Vibe Net - Microblog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Team Vibe Net</h1>
+      <p>Microblog your thoughts here!</p>
+      <button id="toggle-theme">Toggle Theme</button>
+    </header>
 
+    <div class="post-box">
+      <textarea id="postInput" maxlength="140" placeholder="What's happening? @mention #hashtag"></textarea>
+      <div class="char-limit" id="charCount">140 characters left</div>
+      <button class="post-button" onclick="postTweet()">Post</button>
+    </div>
+
+    <section id="tweetList">
+      <!-- Tweets will appear here -->
+    </section>
+
+    <section class="extra-content">
+      <h2>About Team Vibe Net</h2>
+      <p>This is a social microblog platform built for fun and practice by engineering students.</p>
+      <p>Each post is a quick shout with a character limit of 140 characters.</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Create simple posts with mentions and hashtags.</li>
+        <li>Styled display for hashtags and mentions.</li>
+        <li>Random retweet and like counters.</li>
+        <li>Live character counter.</li>
+        <li>Day/Night theme toggle.</li>
+        <li>Profile image and metadata for each post.</li>
+        <li>Responsive layout for mobile and desktop views.</li>
+        <li>Footer with copyright information.</li>
+        <li>Expandable features (edit, delete, like, reply coming soon).</li>
+        <li>Modular code split into HTML, CSS, and JS for learning purpose.</li>
+        <li>Post history view and scrollable feed.</li>
+        <li>Theme remembers user selection with local storage.</li>
+      </ul>
+
+      <h2>Future Enhancements</h2>
+      <ol>
+        <li>Add login functionality.</li>
+        <li>Store posts in local storage or database.</li>
+        <li>Support images and emojis in posts.</li>
+        <li>Post timestamps and edit options.</li>
+        <li>Dark mode auto-detection.</li>
+        <li>Admin panel for moderation.</li>
+        <li>Multilingual support.</li>
+        <li>Post sharing via link generation.</li>
+      </ol>
+
+      <h2>Credits</h2>
+      <p>Developed as part of an engineering mini project by Team 14.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Team Vibe Net. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
