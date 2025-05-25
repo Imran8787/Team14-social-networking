@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Vibe Net - Microblog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Team Vibe Net</h1>
+      <p>Share your thoughts instantly!</p>
+      <button id="themeToggle">Switch Theme</button>
+    </header>
+
+    <div class="composer">
+      <textarea id="messageBox" maxlength="140" placeholder="What's on your mind? @mention #tag"></textarea>
+      <div class="limit-count" id="remainingChars">140 characters left</div>
+      <button class="submit-btn" onclick="publishPost()">Post</button>
+    </div>
+
+    <section id="feedArea">
+      <!-- Posts appear here -->
+    </section>
+
+    <section class="info-section">
+      <h2>About the Platform</h2>
+      <p>This is a creative microblogging experiment by Team 14, designed for quick status sharing.</p>
+      <p>Feel free to post short updates with a 140-character limit.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Write quick posts with hashtag and mention support.</li>
+        <li>Stylish formatting for #tags and @users.</li>
+        <li>Auto-generated like and share counts.</li>
+        <li>Dynamic character countdown.</li>
+        <li>Theme toggle for light/dark modes.</li>
+        <li>User avatar and profile metadata.</li>
+        <li>Responsive on all screen sizes.</li>
+        <li>Expandable future options (edit, delete, reactions).</li>
+        <li>Organized structure using HTML, CSS, and JavaScript.</li>
+        <li>Post archive view and scrolling layout.</li>
+        <li>Theme preference saved using browser storage.</li>
+      </ul>
+
+      <h2>Planned Improvements</h2>
+      <ol>
+        <li>Login/signup system.</li>
+        <li>Save posts locally or in a backend.</li>
+        <li>Include media (images/emojis).</li>
+        <li>Timestamps, post editing.</li>
+        <li>Auto detect dark/light theme.</li>
+        <li>Admin controls for posts.</li>
+        <li>Multi-language interface.</li>
+        <li>Post-sharing links.</li>
+      </ol>
+
+      <h2>Credits</h2>
+      <p>Project by engineering students — Team 14 (2025).</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Team Vibe Net. Built with ❤️ and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
