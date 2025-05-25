@@ -6,63 +6,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="wrapper">
     <header>
       <h1>Team Vibe Net</h1>
-      <p>Microblog your thoughts here!</p>
-      <button id="toggle-theme">Toggle Theme</button>
+      <p>Share your thoughts instantly!</p>
+      <button id="themeToggle">Switch Theme</button>
     </header>
 
-    <div class="post-box">
-      <textarea id="postInput" maxlength="140" placeholder="What's happening? @mention #hashtag"></textarea>
-      <div class="char-limit" id="charCount">140 characters left</div>
-      <button class="post-button" onclick="postTweet()">Post</button>
+    <div class="composer">
+      <textarea id="messageBox" maxlength="140" placeholder="What's on your mind? @mention #tag"></textarea>
+      <div class="limit-count" id="remainingChars">140 characters left</div>
+      <button class="submit-btn" onclick="publishPost()">Post</button>
     </div>
 
-    <section id="tweetList">
-      <!-- Tweets will appear here -->
+    <section id="feedArea">
+      <!-- Posts appear here -->
     </section>
 
-    <section class="extra-content">
-      <h2>About Team Vibe Net</h2>
-      <p>This is a social microblog platform built for fun and practice by engineering students.</p>
-      <p>Each post is a quick shout with a character limit of 140 characters.</p>
+    <section class="info-section">
+      <h2>About the Platform</h2>
+      <p>This is a creative microblogging experiment by Team 14, designed for quick status sharing.</p>
+      <p>Feel free to post short updates with a 140-character limit.</p>
 
-      <h2>Features</h2>
+      <h2>Key Features</h2>
       <ul>
-        <li>Create simple posts with mentions and hashtags.</li>
-        <li>Styled display for hashtags and mentions.</li>
-        <li>Random retweet and like counters.</li>
-        <li>Live character counter.</li>
-        <li>Day/Night theme toggle.</li>
-        <li>Profile image and metadata for each post.</li>
-        <li>Responsive layout for mobile and desktop views.</li>
-        <li>Footer with copyright information.</li>
-        <li>Expandable features (edit, delete, like, reply coming soon).</li>
-        <li>Modular code split into HTML, CSS, and JS for learning purpose.</li>
-        <li>Post history view and scrollable feed.</li>
-        <li>Theme remembers user selection with local storage.</li>
+        <li>Write quick posts with hashtag and mention support.</li>
+        <li>Stylish formatting for #tags and @users.</li>
+        <li>Auto-generated like and share counts.</li>
+        <li>Dynamic character countdown.</li>
+        <li>Theme toggle for light/dark modes.</li>
+        <li>User avatar and profile metadata.</li>
+        <li>Responsive on all screen sizes.</li>
+        <li>Expandable future options (edit, delete, reactions).</li>
+        <li>Organized structure using HTML, CSS, and JavaScript.</li>
+        <li>Post archive view and scrolling layout.</li>
+        <li>Theme preference saved using browser storage.</li>
       </ul>
 
-      <h2>Future Enhancements</h2>
+      <h2>Planned Improvements</h2>
       <ol>
-        <li>Add login functionality.</li>
-        <li>Store posts in local storage or database.</li>
-        <li>Support images and emojis in posts.</li>
-        <li>Post timestamps and edit options.</li>
-        <li>Dark mode auto-detection.</li>
-        <li>Admin panel for moderation.</li>
-        <li>Multilingual support.</li>
-        <li>Post sharing via link generation.</li>
+        <li>Login/signup system.</li>
+        <li>Save posts locally or in a backend.</li>
+        <li>Include media (images/emojis).</li>
+        <li>Timestamps, post editing.</li>
+        <li>Auto detect dark/light theme.</li>
+        <li>Admin controls for posts.</li>
+        <li>Multi-language interface.</li>
+        <li>Post-sharing links.</li>
       </ol>
 
       <h2>Credits</h2>
-      <p>Developed as part of an engineering mini project by Team 14.</p>
+      <p>Project by engineering students — Team 14 (2025).</p>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Team Vibe Net. All rights reserved.</p>
+    <p>&copy; 2025 Team Vibe Net. Built with ❤️ and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
